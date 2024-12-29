@@ -10,7 +10,8 @@ import Foundation
 // MARK: - Character
 public struct RMCharacter: Codable {
     let id: Int
-    let name, status, species, type: String
+    let name, species, type: String
+    let status: RMStatusEnum
     let gender: String
     let origin, location: RMCharacterLocation
     let image: String
@@ -33,7 +34,7 @@ public struct RMCharacter: Codable {
         
         self.id = id
         self.name = name
-        self.status = status
+        self.status = RMStatusEnum(rawValue: status) ?? .unknown
         self.species = species
         self.type = type
         self.gender = gender

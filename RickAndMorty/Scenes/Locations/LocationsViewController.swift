@@ -89,9 +89,4 @@ extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(with: location)
         return cell
     }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-//        viewModel.selectEpisode(at: indexPath.row)
-    }
 }

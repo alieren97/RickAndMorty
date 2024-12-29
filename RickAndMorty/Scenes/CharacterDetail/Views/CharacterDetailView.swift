@@ -89,7 +89,7 @@ final class CharacterDetailView: UIView {
 
     func configure(with character: RMCharacter) {
         nameLabel.text = "Name: \(character.name)"
-        statusLabel.text = "Status: \(character.status)"
+        statusLabel.text = "Status: \(character.status.rawValue)"
         speciesLabel.text = "Species: \(character.species)"
         genderLabel.text = "Gender: \(character.gender)"
 

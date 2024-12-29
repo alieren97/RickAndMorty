@@ -72,7 +72,7 @@ final class RMListCollectionViewCell: UICollectionViewCell {
 
     func configure(with character: RMCharacter) {
         nameLabel.text = character.name
-        statusLabel.text = character.status
+        statusLabel.text = character.status.rawValue
         if let imageUrl = URL(string: character.image) {
             characterImageView.kf.setImage(with: imageUrl)
         } else {

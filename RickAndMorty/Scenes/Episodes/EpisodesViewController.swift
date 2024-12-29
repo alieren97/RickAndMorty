@@ -77,7 +77,8 @@ extension EpisodesViewController: EpisodesViewModelDelegate {
     func navigate(to route: EpisodesViewRoute) {
         switch route {
         case .episodeDetail(let id):
-            print(id)
+            let vc = EpisodeDetailBuilder.make(episodeId: id)
+            show(vc, sender: self)
         }
     }
 
