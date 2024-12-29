@@ -71,14 +71,14 @@ final class HomeViewModelTest: XCTestCase {
     }
 
     func test_CharacterSelected_Is_NavigateCalled() {
-
+        let mockIndex = 0
         service.characterList = MockCharacterDataFactory.characterList
 
         sut.prepareView()
-        sut.selectCharacter(at: 0)
+        sut.selectCharacter(at: mockIndex)
 
         XCTAssertTrue(delegate.navigateCharacterCalled!)
-        XCTAssertNotNil(delegate.selectedCharacter)
+        XCTAssertEqual(delegate.selectedCharacterId, MockCharacterDataFactory.characterList[mockIndex].id)
     }
 
     func test_FetchingCharacterList_Error() {
@@ -97,7 +97,7 @@ private class MockHomeViewModelDelegate: HomeViewModelDelegate {
     var showError: Bool?
     var characterList: [RMCharacter]?
     var navigateCharacterCalled: Bool?
-    var selectedCharacter: RMCharacter?
+    var selectedCharacterId: Int?
 
     func handleViewModelOutput(_ output: RickAndMorty.HomeViewModelOutput) {
         switch output {
@@ -112,9 +112,9 @@ private class MockHomeViewModelDelegate: HomeViewModelDelegate {
 
     func navigate(to route: RickAndMorty.HomeViewRoute) {
         switch route {
-        case .characterDetail(let rMCharacter):
+        case .characterDetail(let characterId):
             navigateCharacterCalled = true
-            selectedCharacter = rMCharacter
+            selectedCharacterId = characterId
         }
 
     }

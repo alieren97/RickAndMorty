@@ -13,7 +13,7 @@ public enum APIRouter: URLRequestConvertible {
     case getCharacters
     case getCharacter(Int)
     case getEpisodes
-    case getEpisode(String)
+    case getEpisode(Int)
     case getLocations
 
     private var baseURL: String {

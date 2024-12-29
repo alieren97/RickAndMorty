@@ -42,7 +42,8 @@ final class RMListTitleView: UIView {
         ])
     }
 
-    func configure(title: String) {
+    func configure(title: String, fontSize: CGFloat = 30) {
         titleLabel.text = title
+        titleLabel.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
     }
 }

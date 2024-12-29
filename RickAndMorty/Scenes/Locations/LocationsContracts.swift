@@ -20,11 +20,6 @@ enum LocationsViewModelOutput {
     case showError(String)
 }
 
-//enum LocationsViewRoute {
-//    case locatio(Int)
-//}
-
 protocol LocationsViewModelDelegate: AnyObject {
     func handleViewModelOutput(_ output: LocationsViewModelOutput)
-//    func navigate(to route: EpisodesViewRoute)
 }

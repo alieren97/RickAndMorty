@@ -28,4 +28,9 @@ public final class ServicesFactory {
         let characterDetailViewService = CharacterDetailServiceImpl()
         return characterDetailViewService
     }
+
+    static func makeEpisodeDetailViewService() -> EpisodeDetailService {
+        let episodeDetailViewService = EpisodeDetailServiceImpl()
+        return episodeDetailViewService
+    }
 }

@@ -25,7 +25,7 @@ final class APIRouterTests: XCTestCase {
 
     func testGetCharacterRequest() throws {
         // Arrange
-        let characterId = "1"
+        let characterId = 1
         let router = APIRouter.getCharacter(characterId)
 
         // Act
@@ -50,7 +50,7 @@ final class APIRouterTests: XCTestCase {
 
     func testGetEpisodeRequest() throws {
         // Arrange
-        let episodeId = "10"
+        let episodeId = 10
         let router = APIRouter.getEpisode(episodeId)
 
         // Act
