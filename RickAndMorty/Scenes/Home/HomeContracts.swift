@@ -22,7 +22,7 @@ enum HomeViewModelOutput {
 }
 
 enum HomeViewRoute {
-    case characterDetail(RMCharacter)
+    case characterDetail(Int)
 }
 
 protocol HomeViewModelDelegate: AnyObject {

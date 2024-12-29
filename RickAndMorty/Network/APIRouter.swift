@@ -11,7 +11,7 @@ import Alamofire
 public enum APIRouter: URLRequestConvertible {
 
     case getCharacters
-    case getCharacter(String)
+    case getCharacter(Int)
     case getEpisodes
     case getEpisode(String)
     case getLocations

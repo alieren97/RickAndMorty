@@ -20,7 +20,7 @@ final class HomeViewModelImpl: HomeViewModel {
     
     func selectCharacter(at index: Int) {
         let character = characterList[index]
-        delegate?.navigate(to: .characterDetail(character))
+        delegate?.navigate(to: .characterDetail(character.id))
     }
 
     private func notify(_ output: HomeViewModelOutput) {

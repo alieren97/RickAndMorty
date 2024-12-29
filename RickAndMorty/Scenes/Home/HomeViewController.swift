@@ -16,6 +16,12 @@ final class HomeViewController: UIViewController {
     }
     private var characterList = [RMCharacter]()
 
+    private lazy var loadingView: RMLoadingView = {
+        let loadingView = RMLoadingView()
+        loadingView.translatesAutoresizingMaskIntoConstraints = false
+        return loadingView
+    }()
+
     private lazy var titleView: RMListTitleView = {
         let view = RMListTitleView()
         view.configure(title: "Characters")
@@ -76,8 +82,13 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: HomeViewModelDelegate {
     func handleViewModelOutput(_ output: HomeViewModelOutput) {
         switch output {
-        case .setLoading(let bool):
-            print(bool)
+        case .setLoading(let showLoading):
+            if showLoading {
+                loadingView.show(in: self.view)
+            } else {
+                loadingView.hide()
+            }
+
         case .showCharacterList(let data):
             characterList = data
             collectionView.reloadData()
@@ -88,7 +99,9 @@ extension HomeViewController: HomeViewModelDelegate {
 
     func navigate(to route: HomeViewRoute) {
         switch route {
-        case .characterDetail: break
+        case .characterDetail(let id):
+            let vc = CharacterDetailBuilder.make(characterId: id)
+            show(vc, sender: self)
         }
     }
 
