@@ -66,6 +66,7 @@ final class EpisodeDetailView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 10
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         layout.itemSize = CGSize(width: 150, height: 200)
         return layout
     }()
@@ -106,8 +107,8 @@ final class EpisodeDetailView: UIView {
             charactersTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
 
             collectionView.topAnchor.constraint(equalTo: charactersTitleLabel.bottomAnchor, constant: 8),
-            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             collectionView.heightAnchor.constraint(equalToConstant: 220)
         ])
     }

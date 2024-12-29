@@ -29,6 +29,13 @@ final class HomeViewController: UIViewController {
         return view
     }()
 
+    private lazy var characterStatusCollectionView: RMCharacterStatusCollectionView = {
+        let view = RMCharacterStatusCollectionView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.delegate = self
+        return view
+    }()
+
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
         collectionView.delegate = self
@@ -62,16 +69,24 @@ final class HomeViewController: UIViewController {
     private func setupLayouts() {
 
         view.addSubview(titleView)
+        view.addSubview(characterStatusCollectionView)
         view.addSubview(collectionView)
         
         NSLayoutConstraint.activate([
 
             titleView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            titleView.bottomAnchor.constraint(equalTo: collectionView.topAnchor, constant: -16),
+            titleView.bottomAnchor.constraint(equalTo: characterStatusCollectionView.topAnchor, constant: -16),
             titleView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             titleView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 
-            collectionView.topAnchor.constraint(equalTo: titleView.bottomAnchor),
+            // CharacterStatusCollectionView Constraints
+            characterStatusCollectionView.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: 16),
+            characterStatusCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            characterStatusCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            characterStatusCollectionView.heightAnchor.constraint(equalToConstant: 40),
+
+            // CollectionView Constraints
+            collectionView.topAnchor.constraint(equalTo: characterStatusCollectionView.bottomAnchor, constant: 8),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
@@ -109,7 +124,7 @@ extension HomeViewController: HomeViewModelDelegate {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        characterList.count
+        viewModel.getCharacters().count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -117,12 +132,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             fatalError("Unable to dequeue RickAndMortyCollectionViewCell")
         }
 
-        let character = characterList[indexPath.item]
+        let character = viewModel.getCharacters()[indexPath.item]
         cell.configure(with: character)
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.selectCharacter(at: indexPath.item)
+    }
+}
+
+extension HomeViewController: RMCharacterStatusCollectionViewDelegate {
+    func selectStatus(with status: RMStatusEnum) {
+        viewModel.updateStatus(with: status)
     }
 }
