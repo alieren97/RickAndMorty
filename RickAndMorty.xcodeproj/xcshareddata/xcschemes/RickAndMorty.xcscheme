@@ -45,6 +45,7 @@
                BlueprintName = "RickAndMortyTests"
                ReferencedContainer = "container:RickAndMorty.xcodeproj">
             </BuildableReference>
+        </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

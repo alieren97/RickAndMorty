@@ -44,6 +44,15 @@
 		315694CD2D21A2AC0032F3AF /* RMListTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694CC2D21A2AC0032F3AF /* RMListTitleView.swift */; };
 		315694D12D21A63C0032F3AF /* RMListCollectionViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694D02D21A63C0032F3AF /* RMListCollectionViewCellTest.swift */; };
 		315694D52D21A7450032F3AF /* RMListTitleViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694D42D21A7450032F3AF /* RMListTitleViewTest.swift */; };
+		315694D82D21A83D0032F3AF /* EpisodesContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694D72D21A83D0032F3AF /* EpisodesContracts.swift */; };
+		315694DA2D21A84E0032F3AF /* EpisodesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694D92D21A84E0032F3AF /* EpisodesBuilder.swift */; };
+		315694DC2D21A8550032F3AF /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694DB2D21A8550032F3AF /* EpisodesViewController.swift */; };
+		315694DE2D21A85B0032F3AF /* EpisodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694DD2D21A85B0032F3AF /* EpisodesViewModel.swift */; };
+		315694E12D21A8A80032F3AF /* EpisodesViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694E02D21A8A80032F3AF /* EpisodesViewService.swift */; };
+		315694E32D21A8C30032F3AF /* EpisodesViewServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694E22D21A8C30032F3AF /* EpisodesViewServiceImpl.swift */; };
+		31CF810B2D21AE4A00387153 /* RMEpisodesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CF810A2D21AE4A00387153 /* RMEpisodesTableViewCell.swift */; };
+		31CF81102D21B1DA00387153 /* RMEpisodesTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CF810F2D21B1DA00387153 /* RMEpisodesTableViewCellTest.swift */; };
+		31CF81122D21B31800387153 /* EpisodesViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CF81112D21B31800387153 /* EpisodesViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +105,15 @@
 		315694CC2D21A2AC0032F3AF /* RMListTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMListTitleView.swift; sourceTree = "<group>"; };
 		315694D02D21A63C0032F3AF /* RMListCollectionViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMListCollectionViewCellTest.swift; sourceTree = "<group>"; };
 		315694D42D21A7450032F3AF /* RMListTitleViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMListTitleViewTest.swift; sourceTree = "<group>"; };
+		315694D72D21A83D0032F3AF /* EpisodesContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesContracts.swift; sourceTree = "<group>"; };
+		315694D92D21A84E0032F3AF /* EpisodesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesBuilder.swift; sourceTree = "<group>"; };
+		315694DB2D21A8550032F3AF /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
+		315694DD2D21A85B0032F3AF /* EpisodesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewModel.swift; sourceTree = "<group>"; };
+		315694E02D21A8A80032F3AF /* EpisodesViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewService.swift; sourceTree = "<group>"; };
+		315694E22D21A8C30032F3AF /* EpisodesViewServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewServiceImpl.swift; sourceTree = "<group>"; };
+		31CF810A2D21AE4A00387153 /* RMEpisodesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodesTableViewCell.swift; sourceTree = "<group>"; };
+		31CF810F2D21B1DA00387153 /* RMEpisodesTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisodesTableViewCellTest.swift; sourceTree = "<group>"; };
+		31CF81112D21B31800387153 /* EpisodesViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +173,7 @@
 		311880612D20A62000B79FA4 /* RickAndMortyTests */ = {
 			isa = PBXGroup;
 			children = (
+				31CF810C2D21B1A800387153 /* Scenes */,
 				315694D22D21A71F0032F3AF /* Common */,
 				311880C42D21524000B79FA4 /* Services */,
 				311880C12D2151AD00B79FA4 /* Network */,
@@ -247,6 +266,7 @@
 		311880A92D21504000B79FA4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				315694D62D21A8360032F3AF /* Episodes */,
 				311880AA2D21504A00B79FA4 /* Home */,
 			);
 			path = Scenes;
@@ -267,6 +287,7 @@
 		311880B32D21508600B79FA4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				315694DF2D21A8980032F3AF /* Episodes */,
 				311880B92D21509200B79FA4 /* ServicesFactory.swift */,
 				311880B62D21508E00B79FA4 /* Home */,
 			);
@@ -359,6 +380,60 @@
 			isa = PBXGroup;
 			children = (
 				315694D42D21A7450032F3AF /* RMListTitleViewTest.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		315694D62D21A8360032F3AF /* Episodes */ = {
+			isa = PBXGroup;
+			children = (
+				31CF81092D21AE3C00387153 /* View */,
+				315694D72D21A83D0032F3AF /* EpisodesContracts.swift */,
+				315694D92D21A84E0032F3AF /* EpisodesBuilder.swift */,
+				315694DB2D21A8550032F3AF /* EpisodesViewController.swift */,
+				315694DD2D21A85B0032F3AF /* EpisodesViewModel.swift */,
+			);
+			path = Episodes;
+			sourceTree = "<group>";
+		};
+		315694DF2D21A8980032F3AF /* Episodes */ = {
+			isa = PBXGroup;
+			children = (
+				315694E02D21A8A80032F3AF /* EpisodesViewService.swift */,
+				315694E22D21A8C30032F3AF /* EpisodesViewServiceImpl.swift */,
+			);
+			path = Episodes;
+			sourceTree = "<group>";
+		};
+		31CF81092D21AE3C00387153 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31CF810A2D21AE4A00387153 /* RMEpisodesTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31CF810C2D21B1A800387153 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				31CF810D2D21B1BC00387153 /* Episodes */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		31CF810D2D21B1BC00387153 /* Episodes */ = {
+			isa = PBXGroup;
+			children = (
+				31CF810E2D21B1C100387153 /* Views */,
+				31CF81112D21B31800387153 /* EpisodesViewModelTest.swift */,
+			);
+			path = Episodes;
+			sourceTree = "<group>";
+		};
+		31CF810E2D21B1C100387153 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				31CF810F2D21B1DA00387153 /* RMEpisodesTableViewCellTest.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -471,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31CF810B2D21AE4A00387153 /* RMEpisodesTableViewCell.swift in Sources */,
 				311880B02D21505700B79FA4 /* HomeViewModel.swift in Sources */,
 				311880A72D214EB100B79FA4 /* Coordinator.swift in Sources */,
 				311880B82D21508E00B79FA4 /* HomeViewService.swift in Sources */,
@@ -485,15 +561,21 @@
 				311880B22D21505700B79FA4 /* HomeContracts.swift in Sources */,
 				3118809C2D20A94A00B79FA4 /* RMEpisodesResponse.swift in Sources */,
 				3118809A2D20A94A00B79FA4 /* RMBaseResponse.swift in Sources */,
+				315694E12D21A8A80032F3AF /* EpisodesViewService.swift in Sources */,
 				3118804C2D20A61C00B79FA4 /* AppDelegate.swift in Sources */,
 				311880A22D214EA800B79FA4 /* AppUIFactory.swift in Sources */,
+				315694D82D21A83D0032F3AF /* EpisodesContracts.swift in Sources */,
+				315694E32D21A8C30032F3AF /* EpisodesViewServiceImpl.swift in Sources */,
 				311880B72D21508E00B79FA4 /* HomeServiceImpl.swift in Sources */,
+				315694DC2D21A8550032F3AF /* EpisodesViewController.swift in Sources */,
 				311880932D20A92200B79FA4 /* NetworkServiceProtocol.swift in Sources */,
 				3118808E2D20A91B00B79FA4 /* RecipeError.swift in Sources */,
 				311880B12D21505700B79FA4 /* HomeViewController.swift in Sources */,
 				3118808D2D20A91B00B79FA4 /* NetworkError.swift in Sources */,
 				311880BA2D21509200B79FA4 /* ServicesFactory.swift in Sources */,
+				315694DA2D21A84E0032F3AF /* EpisodesBuilder.swift in Sources */,
 				311880922D20A92200B79FA4 /* NetworkService.swift in Sources */,
+				315694DE2D21A85B0032F3AF /* EpisodesViewModel.swift in Sources */,
 				3118809E2D20A94F00B79FA4 /* RMCharactersResponse.swift in Sources */,
 				315694CD2D21A2AC0032F3AF /* RMListTitleView.swift in Sources */,
 				311880A32D214EA800B79FA4 /* TabBarCoordinatorFactory.swift in Sources */,
@@ -505,11 +587,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				315694C02D219DAB0032F3AF /* HomeBuilderTest.swift in Sources */,
+				31CF81122D21B31800387153 /* EpisodesViewModelTest.swift in Sources */,
 				315694D52D21A7450032F3AF /* RMListTitleViewTest.swift in Sources */,
 				311880632D20A62000B79FA4 /* RickAndMortyTests.swift in Sources */,
 				311880C32D2151C700B79FA4 /* APIRouterTest.swift in Sources */,
 				315694D12D21A63C0032F3AF /* RMListCollectionViewCellTest.swift in Sources */,
 				311880C02D21513B00B79FA4 /* MockCharacterDataFactory.swift in Sources */,
+				31CF81102D21B1DA00387153 /* RMEpisodesTableViewCellTest.swift in Sources */,
 				311880BD2D2150BC00B79FA4 /* HomeViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,7 +672,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -645,7 +729,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
