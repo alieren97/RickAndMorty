@@ -22,12 +22,11 @@ public final class TabBarCoordinatorImpl: TabBarCoordinator {
 
     func start() {
         // Set up tab bar items and their view controllers
-
         let tabBarController = AppUIFactory.makePrimaryTabBarController()
 
         let firstVC = HomeBuilder.make()
         let secondVC = EpisodesBuilder.make()
-        let thirdVC = ThirdViewController()
+        let thirdVC = LocationsBuilder.make()
 
         let firstNavController = AppUIFactory.makeNavigationControllerForFirstTab(rootViewController: firstVC)
         let secondNavController = AppUIFactory.makeNavigationControllerForSecondTab(rootViewController: secondVC)
@@ -36,19 +35,5 @@ public final class TabBarCoordinatorImpl: TabBarCoordinator {
         tabBarController.viewControllers = [firstNavController, secondNavController, thirdNavController]
 
         self.tabBarController = tabBarController
-    }
-}
-
-final class SecondViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .green
-    }
-}
-
-final class ThirdViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .purple
     }
 }
