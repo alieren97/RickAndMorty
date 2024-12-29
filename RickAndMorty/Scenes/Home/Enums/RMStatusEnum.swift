@@ -5,9 +5,10 @@
 //  Created by Gedikoglu, Ali on 29.12.2024.
 //
 
-import Foundation
+import UIKit
 
-enum RMStatusEnum: String, Codable {
+enum RMStatusEnum: String, CaseIterable, Codable {
+    case all = "All"
     case alive = "Alive"
     case dead = "Dead"
     case unknown = "Unknown"
@@ -16,5 +17,18 @@ enum RMStatusEnum: String, Codable {
         let container = try decoder.singleValueContainer()
         let rawValue = try container.decode(String.self)
         self = RMStatusEnum(rawValue: rawValue) ?? .unknown
+    }
+
+    var backgroundColor: UIColor {
+        switch self {
+        case .all:
+            return .lightGray
+        case .alive:
+            return .green
+        case .dead:
+            return .red
+        case .unknown:
+            return .orange
+        }
     }
 }

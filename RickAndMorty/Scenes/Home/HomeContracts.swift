@@ -10,9 +10,10 @@ import Foundation
 protocol HomeViewModel {
     var delegate: HomeViewModelDelegate? { get set }
     var service: HomeViewService? { get set }
-    var characterList: [RMCharacter] { get }
     func prepareView()
     func selectCharacter(at index: Int)
+    func updateStatus(with status: RMStatusEnum)
+    func getCharacters() -> [RMCharacter]
 }
 
 enum HomeViewModelOutput {

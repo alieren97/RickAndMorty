@@ -11,7 +11,9 @@ final class HomeViewModelImpl: HomeViewModel {
 
     weak var delegate: HomeViewModelDelegate?
     var service: HomeViewService?
-    var characterList: [RMCharacter] = []
+    private var originalCharacterList: [RMCharacter] = []
+    private var updatedCharacterList: [RMCharacter] = []
+    var status: RMStatusEnum = .all
 
     func prepareView() {
         notify(.setLoading(true))
@@ -19,8 +21,30 @@ final class HomeViewModelImpl: HomeViewModel {
     }
     
     func selectCharacter(at index: Int) {
-        let character = characterList[index]
-        delegate?.navigate(to: .characterDetail(character.id))
+        let id = getCharacters()[index].id
+        delegate?.navigate(to: .characterDetail(id))
+    }
+
+    func updateStatus(with status: RMStatusEnum) {
+        self.status = status
+        switch status {
+        case .all:
+            notify(.showCharacterList(originalCharacterList))
+        case .alive, .dead, .unknown:
+            updatedCharacterList = originalCharacterList.filter { character in
+                character.status == status
+            }
+            notify(.showCharacterList(updatedCharacterList))
+        }
+    }
+
+    func getCharacters() -> [RMCharacter] {
+        switch status {
+        case .all:
+            return originalCharacterList
+        case .alive, .dead, .unknown:
+            return updatedCharacterList
+        }
     }
 
     private func notify(_ output: HomeViewModelOutput) {
@@ -33,7 +57,7 @@ final class HomeViewModelImpl: HomeViewModel {
             switch result {
             case .success(let data):
                 self.notify(.setLoading(false))
-                self.characterList = data
+                self.originalCharacterList = data
                 self.notify(.showCharacterList(data))
             case .failure(let failure):
                 self.notify(.setLoading(false))
@@ -41,4 +65,6 @@ final class HomeViewModelImpl: HomeViewModel {
             }
         })
     }
+
+
 }
