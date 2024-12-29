@@ -32,7 +32,7 @@ final class AppUIFactory {
     static func makeNavigationControllerForFirstTab(rootViewController: UIViewController) -> UINavigationController {
 
         let navigationController = makeNavigationController(rootViewController: rootViewController)
-        navigationController.tabBarItem = makeTabBarItemForFirstTab()
+        navigationController.tabBarItem = makeTabBarItemForCharactersTab()
 
         return navigationController
     }
@@ -40,7 +40,7 @@ final class AppUIFactory {
     static func makeNavigationControllerForSecondTab(rootViewController: UIViewController) -> UINavigationController {
 
         let navigationController = makeNavigationController(rootViewController: rootViewController)
-        navigationController.tabBarItem = makeTabBarItemForSecondTab()
+        navigationController.tabBarItem = makeTabBarItemForEpisodesTab()
 
         return navigationController
     }
@@ -48,30 +48,30 @@ final class AppUIFactory {
     static func makeNavigationControllerForThirdTab(rootViewController: UIViewController) -> UINavigationController {
 
         let navigationController = makeNavigationController(rootViewController: rootViewController)
-        navigationController.tabBarItem = makeTabBarItemForThirdTab()
+        navigationController.tabBarItem = makeTabBarItemForLocationsTab()
 
         return navigationController
     }
 
-    private static func makeTabBarItemForFirstTab() -> UITabBarItem {
-        let title = "First"
-        let image = UIImage(systemName: "chevron.left")
+    private static func makeTabBarItemForCharactersTab() -> UITabBarItem {
+        let title = "Characters"
+        let image = UIImage(systemName: "person.bust")
         let tabBarItem = UITabBarItem(title: title, image: image, selectedImage: nil)
 
         return tabBarItem
     }
 
-    private static func makeTabBarItemForSecondTab() -> UITabBarItem {
-        let title = "Second"
-        let image = UIImage(systemName: "chevron.right")
+    private static func makeTabBarItemForEpisodesTab() -> UITabBarItem {
+        let title = "Episodes"
+        let image = UIImage(systemName: "sparkles.tv")
         let tabBarItem = UITabBarItem(title: title, image: image, selectedImage: nil)
 
         return tabBarItem
     }
 
-    private static func makeTabBarItemForThirdTab() -> UITabBarItem {
-        let title = "Third"
-        let image = UIImage(systemName: "chevron.left")
+    private static func makeTabBarItemForLocationsTab() -> UITabBarItem {
+        let title = "Locations"
+        let image = UIImage(systemName: "location.viewfinder")
         let tabBarItem = UITabBarItem(title: title, image: image, selectedImage: nil)
 
         return tabBarItem

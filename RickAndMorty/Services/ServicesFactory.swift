@@ -15,7 +15,12 @@ public final class ServicesFactory {
     }
     
     static func makeEpisodesViewService() -> EpisodesViewService {
-        let homeViewService = EpisodesViewServiceImpl()
-        return homeViewService
+        let episodesViewService = EpisodesViewServiceImpl()
+        return episodesViewService
+    }
+
+    static func makeLocationsViewService() -> LocationsViewService {
+        let locationsViewService = LocationsViewServiceImpl()
+        return locationsViewService
     }
 }
