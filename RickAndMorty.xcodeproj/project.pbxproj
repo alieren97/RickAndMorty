@@ -11,7 +11,6 @@
 		311880552D20A61E00B79FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311880542D20A61E00B79FA4 /* Assets.xcassets */; };
 		311880582D20A61E00B79FA4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 311880572D20A61E00B79FA4 /* Base */; };
 		311880632D20A62000B79FA4 /* RickAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880622D20A62000B79FA4 /* RickAndMortyTests.swift */; };
-		3118807F2D20A6EE00B79FA4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3118807E2D20A6EE00B79FA4 /* Alamofire */; };
 		311880852D20A8FD00B79FA4 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880812D20A8FD00B79FA4 /* Configuration.swift */; };
 		311880862D20A8FD00B79FA4 /* ConfigurationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880822D20A8FD00B79FA4 /* ConfigurationError.swift */; };
 		311880872D20A8FD00B79FA4 /* ConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880832D20A8FD00B79FA4 /* ConfigurationProtocol.swift */; };
@@ -28,6 +27,23 @@
 		311880A32D214EA800B79FA4 /* TabBarCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880A02D214EA800B79FA4 /* TabBarCoordinatorFactory.swift */; };
 		311880A72D214EB100B79FA4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880A42D214EB100B79FA4 /* Coordinator.swift */; };
 		311880A82D214EB100B79FA4 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880A52D214EB100B79FA4 /* TabCoordinator.swift */; };
+		311880AF2D21505700B79FA4 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880AB2D21505700B79FA4 /* HomeBuilder.swift */; };
+		311880B02D21505700B79FA4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880AC2D21505700B79FA4 /* HomeViewModel.swift */; };
+		311880B12D21505700B79FA4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880AD2D21505700B79FA4 /* HomeViewController.swift */; };
+		311880B22D21505700B79FA4 /* HomeContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880AE2D21505700B79FA4 /* HomeContracts.swift */; };
+		311880B72D21508E00B79FA4 /* HomeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880B42D21508E00B79FA4 /* HomeServiceImpl.swift */; };
+		311880B82D21508E00B79FA4 /* HomeViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880B52D21508E00B79FA4 /* HomeViewService.swift */; };
+		311880BA2D21509200B79FA4 /* ServicesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880B92D21509200B79FA4 /* ServicesFactory.swift */; };
+		311880BD2D2150BC00B79FA4 /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880BC2D2150BC00B79FA4 /* HomeViewModelTest.swift */; };
+		311880C02D21513B00B79FA4 /* MockCharacterDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880BE2D21513B00B79FA4 /* MockCharacterDataFactory.swift */; };
+		311880C32D2151C700B79FA4 /* APIRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880C22D2151C700B79FA4 /* APIRouterTest.swift */; };
+		311880C72D2154A500B79FA4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 311880C62D2154A500B79FA4 /* Alamofire */; };
+		315694C02D219DAB0032F3AF /* HomeBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694BF2D219DAB0032F3AF /* HomeBuilderTest.swift */; };
+		315694C32D219F1F0032F3AF /* RMListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694C22D219F1F0032F3AF /* RMListCollectionViewCell.swift */; };
+		315694C62D21A2540032F3AF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 315694C52D21A2540032F3AF /* Kingfisher */; };
+		315694CD2D21A2AC0032F3AF /* RMListTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694CC2D21A2AC0032F3AF /* RMListTitleView.swift */; };
+		315694D12D21A63C0032F3AF /* RMListCollectionViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694D02D21A63C0032F3AF /* RMListCollectionViewCellTest.swift */; };
+		315694D52D21A7450032F3AF /* RMListTitleViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315694D42D21A7450032F3AF /* RMListTitleViewTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +81,21 @@
 		311880A02D214EA800B79FA4 /* TabBarCoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorFactory.swift; sourceTree = "<group>"; };
 		311880A42D214EB100B79FA4 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		311880A52D214EB100B79FA4 /* TabCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
+		311880AB2D21505700B79FA4 /* HomeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		311880AC2D21505700B79FA4 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		311880AD2D21505700B79FA4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		311880AE2D21505700B79FA4 /* HomeContracts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeContracts.swift; sourceTree = "<group>"; };
+		311880B42D21508E00B79FA4 /* HomeServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeServiceImpl.swift; sourceTree = "<group>"; };
+		311880B52D21508E00B79FA4 /* HomeViewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewService.swift; sourceTree = "<group>"; };
+		311880B92D21509200B79FA4 /* ServicesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesFactory.swift; sourceTree = "<group>"; };
+		311880BC2D2150BC00B79FA4 /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
+		311880BE2D21513B00B79FA4 /* MockCharacterDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCharacterDataFactory.swift; sourceTree = "<group>"; };
+		311880C22D2151C700B79FA4 /* APIRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouterTest.swift; sourceTree = "<group>"; };
+		315694BF2D219DAB0032F3AF /* HomeBuilderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilderTest.swift; sourceTree = "<group>"; };
+		315694C22D219F1F0032F3AF /* RMListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMListCollectionViewCell.swift; sourceTree = "<group>"; };
+		315694CC2D21A2AC0032F3AF /* RMListTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMListTitleView.swift; sourceTree = "<group>"; };
+		315694D02D21A63C0032F3AF /* RMListCollectionViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMListCollectionViewCellTest.swift; sourceTree = "<group>"; };
+		315694D42D21A7450032F3AF /* RMListTitleViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMListTitleViewTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3118807F2D20A6EE00B79FA4 /* Alamofire in Frameworks */,
+				315694C62D21A2540032F3AF /* Kingfisher in Frameworks */,
+				311880C72D2154A500B79FA4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +140,9 @@
 		3118804A2D20A61C00B79FA4 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				315694CA2D21A29F0032F3AF /* Common */,
+				311880B32D21508600B79FA4 /* Services */,
+				311880A92D21504000B79FA4 /* Scenes */,
 				311880A12D214EA800B79FA4 /* Factories */,
 				311880A62D214EB100B79FA4 /* Coordinators */,
 				311880802D20A8F400B79FA4 /* Network */,
@@ -120,6 +155,11 @@
 		311880612D20A62000B79FA4 /* RickAndMortyTests */ = {
 			isa = PBXGroup;
 			children = (
+				315694D22D21A71F0032F3AF /* Common */,
+				311880C42D21524000B79FA4 /* Services */,
+				311880C12D2151AD00B79FA4 /* Network */,
+				311880BF2D21513B00B79FA4 /* Mock */,
+				311880BB2D2150AD00B79FA4 /* Home */,
 				311880622D20A62000B79FA4 /* RickAndMortyTests.swift */,
 			);
 			path = RickAndMortyTests;
@@ -204,6 +244,125 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		311880A92D21504000B79FA4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				311880AA2D21504A00B79FA4 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		311880AA2D21504A00B79FA4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				315694C12D219F0F0032F3AF /* Views */,
+				311880AB2D21505700B79FA4 /* HomeBuilder.swift */,
+				311880AE2D21505700B79FA4 /* HomeContracts.swift */,
+				311880AD2D21505700B79FA4 /* HomeViewController.swift */,
+				311880AC2D21505700B79FA4 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		311880B32D21508600B79FA4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				311880B92D21509200B79FA4 /* ServicesFactory.swift */,
+				311880B62D21508E00B79FA4 /* Home */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		311880B62D21508E00B79FA4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				311880B42D21508E00B79FA4 /* HomeServiceImpl.swift */,
+				311880B52D21508E00B79FA4 /* HomeViewService.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		311880BB2D2150AD00B79FA4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				315694CF2D21A61E0032F3AF /* Views */,
+				311880BC2D2150BC00B79FA4 /* HomeViewModelTest.swift */,
+				315694BF2D219DAB0032F3AF /* HomeBuilderTest.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		311880BF2D21513B00B79FA4 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				311880BE2D21513B00B79FA4 /* MockCharacterDataFactory.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		311880C12D2151AD00B79FA4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				311880C22D2151C700B79FA4 /* APIRouterTest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		311880C42D21524000B79FA4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		315694C12D219F0F0032F3AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				315694C22D219F1F0032F3AF /* RMListCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		315694CA2D21A29F0032F3AF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				315694CB2D21A2A20032F3AF /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		315694CB2D21A2A20032F3AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				315694CC2D21A2AC0032F3AF /* RMListTitleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		315694CF2D21A61E0032F3AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				315694D02D21A63C0032F3AF /* RMListCollectionViewCellTest.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		315694D22D21A71F0032F3AF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				315694D32D21A73A0032F3AF /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		315694D32D21A73A0032F3AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				315694D42D21A7450032F3AF /* RMListTitleViewTest.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,7 +380,8 @@
 			);
 			name = RickAndMorty;
 			packageProductDependencies = (
-				3118807E2D20A6EE00B79FA4 /* Alamofire */,
+				311880C62D2154A500B79FA4 /* Alamofire */,
+				315694C52D21A2540032F3AF /* Kingfisher */,
 			);
 			productName = RickAndMorty;
 			productReference = 311880482D20A61C00B79FA4 /* RickAndMorty.app */;
@@ -274,7 +434,8 @@
 			);
 			mainGroup = 3118803F2D20A61C00B79FA4;
 			packageReferences = (
-				3118807D2D20A6EE00B79FA4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				311880C52D2154A500B79FA4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				315694C42D21A2540032F3AF /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 311880492D20A61C00B79FA4 /* Products */;
 			projectDirPath = "";
@@ -310,22 +471,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				311880B02D21505700B79FA4 /* HomeViewModel.swift in Sources */,
 				311880A72D214EB100B79FA4 /* Coordinator.swift in Sources */,
+				311880B82D21508E00B79FA4 /* HomeViewService.swift in Sources */,
 				311880872D20A8FD00B79FA4 /* ConfigurationProtocol.swift in Sources */,
 				3118809B2D20A94A00B79FA4 /* RMLocationsResponse.swift in Sources */,
+				315694C32D219F1F0032F3AF /* RMListCollectionViewCell.swift in Sources */,
 				311880952D20A92F00B79FA4 /* APIRouter.swift in Sources */,
 				311880A82D214EB100B79FA4 /* TabCoordinator.swift in Sources */,
 				311880862D20A8FD00B79FA4 /* ConfigurationError.swift in Sources */,
+				311880AF2D21505700B79FA4 /* HomeBuilder.swift in Sources */,
 				311880852D20A8FD00B79FA4 /* Configuration.swift in Sources */,
+				311880B22D21505700B79FA4 /* HomeContracts.swift in Sources */,
 				3118809C2D20A94A00B79FA4 /* RMEpisodesResponse.swift in Sources */,
 				3118809A2D20A94A00B79FA4 /* RMBaseResponse.swift in Sources */,
 				3118804C2D20A61C00B79FA4 /* AppDelegate.swift in Sources */,
 				311880A22D214EA800B79FA4 /* AppUIFactory.swift in Sources */,
+				311880B72D21508E00B79FA4 /* HomeServiceImpl.swift in Sources */,
 				311880932D20A92200B79FA4 /* NetworkServiceProtocol.swift in Sources */,
 				3118808E2D20A91B00B79FA4 /* RecipeError.swift in Sources */,
+				311880B12D21505700B79FA4 /* HomeViewController.swift in Sources */,
 				3118808D2D20A91B00B79FA4 /* NetworkError.swift in Sources */,
+				311880BA2D21509200B79FA4 /* ServicesFactory.swift in Sources */,
 				311880922D20A92200B79FA4 /* NetworkService.swift in Sources */,
 				3118809E2D20A94F00B79FA4 /* RMCharactersResponse.swift in Sources */,
+				315694CD2D21A2AC0032F3AF /* RMListTitleView.swift in Sources */,
 				311880A32D214EA800B79FA4 /* TabBarCoordinatorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +504,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				315694C02D219DAB0032F3AF /* HomeBuilderTest.swift in Sources */,
+				315694D52D21A7450032F3AF /* RMListTitleViewTest.swift in Sources */,
 				311880632D20A62000B79FA4 /* RickAndMortyTests.swift in Sources */,
+				311880C32D2151C700B79FA4 /* APIRouterTest.swift in Sources */,
+				315694D12D21A63C0032F3AF /* RMListCollectionViewCellTest.swift in Sources */,
+				311880C02D21513B00B79FA4 /* MockCharacterDataFactory.swift in Sources */,
+				311880BD2D2150BC00B79FA4 /* HomeViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,7 +728,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95J5ZJ5FVG;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alieren.RickAndMortyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -575,7 +751,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95J5ZJ5FVG;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alieren.RickAndMortyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -622,7 +798,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3118807D2D20A6EE00B79FA4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		311880C52D2154A500B79FA4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -630,13 +806,26 @@
 				version = 5.10.0;
 			};
 		};
+		315694C42D21A2540032F3AF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3118807E2D20A6EE00B79FA4 /* Alamofire */ = {
+		311880C62D2154A500B79FA4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3118807D2D20A6EE00B79FA4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 311880C52D2154A500B79FA4 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		315694C52D21A2540032F3AF /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 315694C42D21A2540032F3AF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

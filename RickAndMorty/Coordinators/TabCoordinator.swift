@@ -1,6 +1,6 @@
 //
 //  TabCoordinator.swift
-//  Recipe
+//  RickAndMorty
 //
 //  Created by Gedikoglu, Ali on 28.12.2024.
 //
@@ -25,7 +25,7 @@ public final class TabBarCoordinatorImpl: TabBarCoordinator {
 
         let tabBarController = AppUIFactory.makePrimaryTabBarController()
 
-        let firstVC = FirstViewController()
+        let firstVC = HomeBuilder.make()
         let secondVC = SecondViewController()
         let thirdVC = ThirdViewController()
 
@@ -36,13 +36,6 @@ public final class TabBarCoordinatorImpl: TabBarCoordinator {
         tabBarController.viewControllers = [firstNavController, secondNavController, thirdNavController]
 
         self.tabBarController = tabBarController
-    }
-}
-
-final class FirstViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .red
     }
 }
 
