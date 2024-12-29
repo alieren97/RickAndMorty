@@ -24,6 +24,10 @@
 		3118809B2D20A94A00B79FA4 /* RMLocationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880982D20A94A00B79FA4 /* RMLocationsResponse.swift */; };
 		3118809C2D20A94A00B79FA4 /* RMEpisodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880992D20A94A00B79FA4 /* RMEpisodesResponse.swift */; };
 		3118809E2D20A94F00B79FA4 /* RMCharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3118809D2D20A94F00B79FA4 /* RMCharactersResponse.swift */; };
+		311880A22D214EA800B79FA4 /* AppUIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3118809F2D214EA800B79FA4 /* AppUIFactory.swift */; };
+		311880A32D214EA800B79FA4 /* TabBarCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880A02D214EA800B79FA4 /* TabBarCoordinatorFactory.swift */; };
+		311880A72D214EB100B79FA4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880A42D214EB100B79FA4 /* Coordinator.swift */; };
+		311880A82D214EB100B79FA4 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311880A52D214EB100B79FA4 /* TabCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		311880982D20A94A00B79FA4 /* RMLocationsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMLocationsResponse.swift; sourceTree = "<group>"; };
 		311880992D20A94A00B79FA4 /* RMEpisodesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMEpisodesResponse.swift; sourceTree = "<group>"; };
 		3118809D2D20A94F00B79FA4 /* RMCharactersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCharactersResponse.swift; sourceTree = "<group>"; };
+		3118809F2D214EA800B79FA4 /* AppUIFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUIFactory.swift; sourceTree = "<group>"; };
+		311880A02D214EA800B79FA4 /* TabBarCoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorFactory.swift; sourceTree = "<group>"; };
+		311880A42D214EB100B79FA4 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		311880A52D214EB100B79FA4 /* TabCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,8 @@
 		3118804A2D20A61C00B79FA4 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				311880A12D214EA800B79FA4 /* Factories */,
+				311880A62D214EB100B79FA4 /* Coordinators */,
 				311880802D20A8F400B79FA4 /* Network */,
 				3118807C2D20A67800B79FA4 /* Resources */,
 				311880592D20A61E00B79FA4 /* Info.plist */,
@@ -174,6 +184,24 @@
 				311880982D20A94A00B79FA4 /* RMLocationsResponse.swift */,
 			);
 			path = ResponseModels;
+			sourceTree = "<group>";
+		};
+		311880A12D214EA800B79FA4 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				3118809F2D214EA800B79FA4 /* AppUIFactory.swift */,
+				311880A02D214EA800B79FA4 /* TabBarCoordinatorFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		311880A62D214EB100B79FA4 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				311880A42D214EB100B79FA4 /* Coordinator.swift */,
+				311880A52D214EB100B79FA4 /* TabCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,19 +310,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				311880A72D214EB100B79FA4 /* Coordinator.swift in Sources */,
 				311880872D20A8FD00B79FA4 /* ConfigurationProtocol.swift in Sources */,
 				3118809B2D20A94A00B79FA4 /* RMLocationsResponse.swift in Sources */,
 				311880952D20A92F00B79FA4 /* APIRouter.swift in Sources */,
+				311880A82D214EB100B79FA4 /* TabCoordinator.swift in Sources */,
 				311880862D20A8FD00B79FA4 /* ConfigurationError.swift in Sources */,
 				311880852D20A8FD00B79FA4 /* Configuration.swift in Sources */,
 				3118809C2D20A94A00B79FA4 /* RMEpisodesResponse.swift in Sources */,
 				3118809A2D20A94A00B79FA4 /* RMBaseResponse.swift in Sources */,
 				3118804C2D20A61C00B79FA4 /* AppDelegate.swift in Sources */,
+				311880A22D214EA800B79FA4 /* AppUIFactory.swift in Sources */,
 				311880932D20A92200B79FA4 /* NetworkServiceProtocol.swift in Sources */,
 				3118808E2D20A91B00B79FA4 /* RecipeError.swift in Sources */,
 				3118808D2D20A91B00B79FA4 /* NetworkError.swift in Sources */,
 				311880922D20A92200B79FA4 /* NetworkService.swift in Sources */,
 				3118809E2D20A94F00B79FA4 /* RMCharactersResponse.swift in Sources */,
+				311880A32D214EA800B79FA4 /* TabBarCoordinatorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
