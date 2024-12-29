@@ -1,6 +1,6 @@
 //
 //  RMLocationsResponse.swift
-//  Recipe
+//  RickAndMorty
 //
 //  Created by Gedikoglu, Ali on 28.12.2024.
 //
