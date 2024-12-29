@@ -26,7 +26,7 @@ public final class TabBarCoordinatorImpl: TabBarCoordinator {
         let tabBarController = AppUIFactory.makePrimaryTabBarController()
 
         let firstVC = HomeBuilder.make()
-        let secondVC = SecondViewController()
+        let secondVC = EpisodesBuilder.make()
         let thirdVC = ThirdViewController()
 
         let firstNavController = AppUIFactory.makeNavigationControllerForFirstTab(rootViewController: firstVC)
