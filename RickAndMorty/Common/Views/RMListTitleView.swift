@@ -19,6 +19,17 @@ final class RMListTitleView: UIView {
         return label
     }()
 
+    lazy var subTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Rick And Morty"
+        label.textColor = UIColor.black
+        label.font = UIFont.systemFont(ofSize: 8, weight: .bold)
+        label.numberOfLines = 1
+        label.textAlignment = .right
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setupViews()
@@ -31,6 +42,7 @@ final class RMListTitleView: UIView {
 
     private func setupViews() {
         addSubview(titleLabel)
+        addSubview(subTitleLabel)
     }
 
     private func setupLayouts() {
@@ -38,7 +50,11 @@ final class RMListTitleView: UIView {
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             titleLabel.topAnchor.constraint(equalTo: topAnchor),
             titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            titleLabel.trailingAnchor.constraint(equalTo: subTitleLabel.leadingAnchor, constant: -16),
+
+            subTitleLabel.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 16),
+            subTitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
+            subTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
         ])
     }
 

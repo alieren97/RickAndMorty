@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol HomeViewService {
+public protocol HomeViewService {
 
     func getCharacterList(completion: @escaping (Result<[RMCharacter], NetworkError>) -> Void)
 }
