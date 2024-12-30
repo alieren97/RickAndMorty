@@ -8,9 +8,15 @@
 import Foundation
 
 final class EpisodeDetailServiceImpl: EpisodeDetailService {
-    
+
+    private let networkService: NetworkServiceProtocol
+
+    init(networkService: NetworkServiceProtocol = NetworkService.shared) {
+        self.networkService = networkService
+    }
+
     func getEpisodeDetail(episodeId: Int, completion: @escaping (Result<RMEpisode, NetworkError>) -> Void) {
-        NetworkService.shared.request(type: RMEpisode.self, route: .getEpisode(episodeId)) { result in
+        networkService.request(type: RMEpisode.self, route: .getEpisode(episodeId)) { result in
             switch result {
             case .success(let data):
                 completion(.success(data))

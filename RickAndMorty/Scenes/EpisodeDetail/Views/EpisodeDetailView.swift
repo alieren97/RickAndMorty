@@ -51,7 +51,7 @@ final class EpisodeDetailView: UIView {
         return view
     }()
 
-    private lazy var collectionView: UICollectionView = {
+    lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
         collectionView.delegate = self
         collectionView.dataSource = self

@@ -9,7 +9,7 @@ import Foundation
 
 protocol CharacterDetailViewModel {
     var delegate: CharacterDetailViewModelDelegate? { get set }
-    var service: CharacterDetailService! { get set }
+    var service: CharacterDetailService? { get set }
     var characterId: Int? { get set }
     func prepareView()
 }

@@ -8,8 +8,15 @@
 import Foundation
 
 final class LocationsViewServiceImpl: LocationsViewService {
+
+    private let networkService: NetworkServiceProtocol
+
+    init(networkService: NetworkServiceProtocol = NetworkService.shared) {
+        self.networkService = networkService
+    }
+
     func getLocations(completion: @escaping (Result<[RMLocation], NetworkError>) -> Void) {
-        NetworkService.shared.request(type: RMBaseResponse<RMLocation>.self, route: .getLocations) { result in
+        networkService.request(type: RMBaseResponse<RMLocation>.self, route: .getLocations) { result in
             switch result {
             case .success(let data):
                 completion(.success(data.results))

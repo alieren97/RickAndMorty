@@ -10,7 +10,7 @@ import Foundation
 final class CharacterDetailViewModelImpl: CharacterDetailViewModel {
 
     weak var delegate: CharacterDetailViewModelDelegate?
-    var service: CharacterDetailService!
+    var service: CharacterDetailService?
 
     var characterId: Int?
     var characterDetail: RMCharacter?
@@ -22,7 +22,7 @@ final class CharacterDetailViewModelImpl: CharacterDetailViewModel {
 
     private func fetchCharacterDetail() {
         guard let characterId = characterId else { return }
-        service.getCharacterDetail(characterId: characterId, completion: { [weak self] result in
+        service?.getCharacterDetail(characterId: characterId, completion: { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let data):

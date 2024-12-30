@@ -14,11 +14,11 @@ protocol RMCharacterStatusCollectionViewDelegate: AnyObject {
 final class RMCharacterStatusCollectionView: UIView {
 
     weak var delegate: RMCharacterStatusCollectionViewDelegate?
-    private var selectedIndex: IndexPath?
 
     private let status: [RMStatusEnum] = RMStatusEnum.allCases
+    var selectedIndex: IndexPath?
 
-    private lazy var collectionView: UICollectionView = {
+    lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -74,7 +74,6 @@ extension RMCharacterStatusCollectionView: UICollectionViewDataSource, UICollect
         }
 
         let status = status[indexPath.item]
-
         cell.configure(with: status, isSelected: selectedIndex == indexPath)
         return cell
     }

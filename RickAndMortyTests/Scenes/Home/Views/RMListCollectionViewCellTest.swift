@@ -36,6 +36,6 @@ final class RMListCollectionViewCellTest: XCTestCase {
 
         sut.configure(with: mockData)
 
-        XCTAssertEqual(sut.statusLabel.text, mockData.status)
+        XCTAssertEqual(sut.statusLabel.text, mockData.status.rawValue)
     }
 }

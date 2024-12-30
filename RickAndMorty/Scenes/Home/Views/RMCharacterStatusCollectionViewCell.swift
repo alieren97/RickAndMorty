@@ -10,6 +10,8 @@ import UIKit
 final class RMCharacterStatusCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "RMCharacterStatusCollectionViewCell"
 
+    private var status: RMStatusEnum?
+
     lazy var statusTitleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
@@ -40,10 +42,15 @@ final class RMCharacterStatusCollectionViewCell: UICollectionViewCell {
     }
 
     func configure(with status: RMStatusEnum, isSelected: Bool) {
+        self.status = status
         statusTitleLabel.text = status.rawValue
         contentView.backgroundColor = isSelected ? status.backgroundColor : .clear
         contentView.layer.borderWidth = 1
         contentView.layer.borderColor = UIColor.gray.cgColor
         contentView.layer.cornerRadius = 16
+    }
+
+    func getStatus() -> RMStatusEnum {
+        return status ?? .all
     }
 }

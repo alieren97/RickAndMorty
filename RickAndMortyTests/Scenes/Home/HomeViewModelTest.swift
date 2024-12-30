@@ -89,6 +89,36 @@ final class HomeViewModelTest: XCTestCase {
 
         XCTAssertTrue(delegate.showError!)
     }
+
+    func test_UpdateStatus_SelectedAll() {
+
+        service.characterList = MockCharacterDataFactory.characterList
+
+        sut.prepareView()
+        sut.updateStatus(with: .all)
+
+        XCTAssertEqual(delegate.characterList?.count, MockCharacterDataFactory.characterList.count)
+    }
+
+    func test_UpdateStatus_SelectedDead_Equal_0() {
+
+        service.characterList = MockCharacterDataFactory.characterList
+
+        sut.prepareView()
+        sut.updateStatus(with: .dead)
+
+        XCTAssertEqual(delegate.characterList?.count, 0)
+    }
+
+    func test_UpdateStatus_SelectedUnknown_Equal_0() {
+
+        service.characterList = MockCharacterDataFactory.characterList
+
+        sut.prepareView()
+        sut.updateStatus(with: .unknown)
+
+        XCTAssertEqual(delegate.characterList?.count, 0)
+    }
 }
 
 private class MockHomeViewModelDelegate: HomeViewModelDelegate {
@@ -99,7 +129,7 @@ private class MockHomeViewModelDelegate: HomeViewModelDelegate {
     var navigateCharacterCalled: Bool?
     var selectedCharacterId: Int?
 
-    func handleViewModelOutput(_ output: RickAndMorty.HomeViewModelOutput) {
+    func handleViewModelOutput(_ output: HomeViewModelOutput) {
         switch output {
         case .setLoading(let bool):
             showLoadingIndicator = bool
@@ -110,7 +140,7 @@ private class MockHomeViewModelDelegate: HomeViewModelDelegate {
         }
     }
 
-    func navigate(to route: RickAndMorty.HomeViewRoute) {
+    func navigate(to route: HomeViewRoute) {
         switch route {
         case .characterDetail(let characterId):
             navigateCharacterCalled = true
@@ -121,10 +151,11 @@ private class MockHomeViewModelDelegate: HomeViewModelDelegate {
 }
 
 private class MockHomeViewService: HomeViewService {
+
     var characterList = [RMCharacter]()
     var error: NetworkError?
 
-    func getCharacterList(completion: @escaping (Result<[RickAndMorty.RMCharacter], RickAndMorty.NetworkError>) -> Void) {
+    func getCharacterList(completion: @escaping (Result<[RMCharacter], NetworkError>) -> Void) {
         if let error = error {
             completion(.failure(error))
         } else {
